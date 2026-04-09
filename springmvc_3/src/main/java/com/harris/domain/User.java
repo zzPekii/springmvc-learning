@@ -5,6 +5,8 @@ public class User {
     private int age;
     private Address address;
 
+    public User() {}
+
     public User(String name, int age, Address address) {
         this.name = name;
         this.age = age;

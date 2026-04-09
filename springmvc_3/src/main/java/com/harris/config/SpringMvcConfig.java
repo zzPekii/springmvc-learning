@@ -6,5 +6,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @ComponentScan("com.harris.controller")     // it will only scan controller
+@EnableWebMvc       // label json -> obj
 public class SpringMvcConfig {
 }

@@ -66,4 +66,29 @@ public class UserController {
         System.out.println(likes);
         return "{'module': 'list param'}";
     }
+
+
+    // JSON param
+    @RequestMapping("/listParamForJson")
+    @ResponseBody
+    public String listParamForJson(@RequestBody List<String> likes) {
+        System.out.println("JSON Param: " + likes);
+        return "{'module': 'JSON Param'}";
+    }
+
+    // JSON POJO class
+    @RequestMapping("/pojoParamForJson")
+    @ResponseBody
+    public String listParamForJson2(@RequestBody User user) {
+        System.out.println("JSON Param: " + user);
+        return "{'module': 'JSON Param'}";
+    }
+
+    // JSON POJO list
+    @RequestMapping("/pojoParamList")
+    @ResponseBody
+    public String listParamForJson3(@RequestBody List<User> users) {
+        System.out.println("JSON Param: " + users);
+        return "{'module': 'JSON Param'}";
+    }
 }
